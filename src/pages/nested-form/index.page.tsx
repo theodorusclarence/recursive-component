@@ -5,9 +5,11 @@ import logger from '@/lib/logger';
 
 import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
+import PrimaryLink from '@/components/links/PrimaryLink';
 import Seo from '@/components/Seo';
 import Typography from '@/components/typography/Typography';
 
+import { FILE_PATH } from '@/constant/repo';
 import FieldArrayForm from '@/pages/nested-form/components/FieldArrayForm';
 
 export default function NestedFormPage() {
@@ -51,6 +53,13 @@ export default function NestedFormPage() {
             <Typography as='h1' variant='h1'>
               Nested Form
             </Typography>
+
+            <PrimaryLink
+              className='mt-1'
+              href={FILE_PATH + '/src/pages/nested-form/index.page.tsx'}
+            >
+              Source code
+            </PrimaryLink>
 
             <section className='mt-4'>
               <FormProvider {...methods}>

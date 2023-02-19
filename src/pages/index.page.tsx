@@ -8,6 +8,8 @@ import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
 import Typography from '@/components/typography/Typography';
 
+import { REPOSITORY_URL } from '@/constant/repo';
+
 export default function HomePage() {
   return (
     <Layout>
@@ -26,9 +28,7 @@ export default function HomePage() {
               Useful recursive components pattern that I've built with React
             </Typography>
             <Typography variant='b3' className='mt-6' color='secondary'>
-              <ArrowLink href='https://github.com/theodorusclarence/recursive-component'>
-                See the repository
-              </ArrowLink>
+              <ArrowLink href={REPOSITORY_URL}>See the repository</ArrowLink>
             </Typography>
 
             <div className='mt-6'>
