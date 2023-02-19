@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
+import { FiArrowLeft, FiCode } from 'react-icons/fi';
 
 import logger from '@/lib/logger';
 
 import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
+import IconLink from '@/components/links/IconLink';
 import PrimaryLink from '@/components/links/PrimaryLink';
 import Seo from '@/components/Seo';
 import Typography from '@/components/typography/Typography';
@@ -50,16 +52,27 @@ export default function NestedFormPage() {
       <main>
         <section className=''>
           <div className='layout min-h-screen py-20'>
-            <Typography as='h1' variant='h1'>
-              Nested Form
-            </Typography>
-
-            <PrimaryLink
-              className='mt-1'
-              href={FILE_PATH + '/src/pages/nested-form/index.page.tsx'}
-            >
-              Source code
-            </PrimaryLink>
+            <header className='flex items-center gap-2 lg:gap-3'>
+              <IconLink
+                variant='ghost'
+                iconClassName='text-lg'
+                className='bg-transparent'
+                href='/'
+                icon={FiArrowLeft}
+              />
+              <div>
+                <Typography as='h1' variant='h1'>
+                  Nested Form
+                </Typography>
+                <PrimaryLink
+                  href={FILE_PATH + '/src/pages/nested-form/index.page.tsx'}
+                  className='gap-2'
+                >
+                  <FiCode />
+                  Source code
+                </PrimaryLink>
+              </div>
+            </header>
 
             <section className='mt-4'>
               <FormProvider {...methods}>
