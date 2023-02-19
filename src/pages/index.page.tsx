@@ -63,5 +63,9 @@ const examples = [
     title: 'Nested Form',
     route: '/nested-form',
   },
+  {
+    title: 'Navigation',
+    route: '/navigation',
+  },
 ];
 //#endregion  //*======== Example ===========
